@@ -29,5 +29,9 @@ namespace Console_Knights.Models
             Console.WriteLine($"Min Damage: {minDamage}");
             Console.WriteLine($"Max Damage: {maxDamage}");
         }
+        public virtual void GetWeaponInfoShort()
+        {
+            Console.WriteLine($@"Name: {Name} | Min Damage: {minDamage} | Max Damage: {maxDamage}");
+        }
     }
 }

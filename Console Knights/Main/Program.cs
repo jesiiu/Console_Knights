@@ -1,6 +1,5 @@
 ﻿using Console_Knights.Controller;
 
-var gameController = MenuController.Instance;
+var initialize = InitialzeController.Instance;
 
-
-gameController.InitializeApplication();
+initialize.InitializeApplication();

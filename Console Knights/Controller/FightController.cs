@@ -1,11 +1,12 @@
 ﻿using Console_Knights.Assets;
 using Console_Knights.Memory;
-using Console_Knights.Utils;
+using Console_Knights.Utils.Presets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Console_Knights.Controller
 {
@@ -70,7 +71,7 @@ namespace Console_Knights.Controller
             }
             else
             {
-                Console.WriteLine($"You win figth !");
+                Console.WriteLine($"You win this figth !");
                 Console.WriteLine("Press any key to continue game...");
                 Console.ReadLine();
             }

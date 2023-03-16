@@ -10,9 +10,9 @@ namespace Console_Knights.Controller
     {
         private static HeroController heroController = HeroController.Instance;
         private static FightController fightController = FightController.Instance;
+
         private static MenuController instance = null;
         private static readonly object padlock = new object();
-
         public static MenuController Instance
         {
             get
@@ -26,13 +26,7 @@ namespace Console_Knights.Controller
                 }
             }
         }
-        public void InitializeApplication()
-        {
-            Console.WriteLine("Welcome in Console Knights");
-            heroController.CreateKnight();
-            MainMenu();
-        }
-        private void MainMenu()
+        public void MainMenu()
         {
             while (true)
             {
@@ -55,6 +49,7 @@ namespace Console_Knights.Controller
                         heroController.HeroInformations();
                         break;
                     case "3":
+                        throw new NotImplementedException();
                         break;
                     case "4":
                         //SaveGame();

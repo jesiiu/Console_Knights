@@ -16,5 +16,9 @@ namespace Console_Knights.Assets
         {
             base.ItemDescription();
         }
+        public override void ItemDescriptionShort()
+        {
+            base.ItemDescriptionShort();
+        }
     }
 }

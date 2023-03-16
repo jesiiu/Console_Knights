@@ -18,5 +18,9 @@ namespace Console_Knights.Models
             Console.WriteLine($"Description: {Description}");
             Console.WriteLine($"Cost: {Cost}");
         }
+        public virtual void ItemDescriptionShort()
+        {
+            Console.WriteLine($"Name: {Name} | Description: {Description} | Cost: {Cost}");
+        }
     }
 }

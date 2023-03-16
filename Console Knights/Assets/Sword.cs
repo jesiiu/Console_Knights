@@ -25,5 +25,9 @@ namespace Console_Knights.Assets
         {
             base.GetWeaponInfo();
         }
+        public override void GetWeaponInfoShort()
+        {
+            base.GetWeaponInfoShort();
+        }
     }
 }
