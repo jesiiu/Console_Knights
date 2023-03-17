@@ -1,17 +1,20 @@
-﻿using Console_Knights.Assets;
+﻿using Console_Knights.Memory;
+using Console_Knights.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Console_Knights.Memory
+namespace Console_Knights.Assets
 {
-    public sealed class AppMemory
+    public class Tavern : ShopModel
     {
-        private static AppMemory instance = null;
+        public List<ItemModel> Items { get; set; } = new List<ItemModel>();
+
+        private static Tavern instance = null;
         private static readonly object padlock = new object();
-        public static AppMemory Instance
+        public static Tavern Instance
         {
             get
             {
@@ -19,12 +22,11 @@ namespace Console_Knights.Memory
                 {
 
                     if (instance == null)
-                        instance = new AppMemory();
+                        instance = new Tavern();
                     return instance;
                 }
             }
         }
-        public Hero mainHero { get; set; }
-        private static Tavern Tavern = Tavern.Instance;
+
     }
 }

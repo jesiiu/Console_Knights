@@ -14,8 +14,9 @@ namespace Console_Knights.Models
         public int currentHealth { get; set; } = 10;
         public int Defence { get; set; } = 0;
         public int Level { get; set; } = 1;
-        public int Money { get; set; } = 0;
+        public int Money { get; set; } = 22;
         public WeaponModel Weapon { get; set; } = new Sword("Long-Sword", 4, 6);
+        public List<ItemModel> Equipment = new List<ItemModel>();
 
         public virtual void GetPlayerInfo()
         {
@@ -24,6 +25,10 @@ namespace Console_Knights.Models
             Console.WriteLine($"Defence: {Defence}");
             Console.WriteLine($"Level: {Level}");
             Console.WriteLine($"Money: {Money}");
+            foreach (var item in Equipment)
+            {
+                Console.WriteLine($"Item: {item.Name} | {item.Description}");
+            }
         }
     }
 }

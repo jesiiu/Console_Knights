@@ -10,5 +10,6 @@ namespace Console_Knights.Models
     {
         public string Name { get; set; } = "Knight Tavern";
 
+
     }
 }

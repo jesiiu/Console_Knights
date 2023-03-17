@@ -10,6 +10,7 @@ namespace Console_Knights.Controller
     {
         private static HeroController heroController = HeroController.Instance;
         private static FightController fightController = FightController.Instance;
+        private static ShopController shopController = ShopController.Instance;
 
         private static MenuController instance = null;
         private static readonly object padlock = new object();
@@ -36,8 +37,9 @@ namespace Console_Knights.Controller
                 Console.WriteLine("Fight: 1");
                 Console.WriteLine("Your hero informations: 2");
                 Console.WriteLine("Shop: 3");
-                Console.WriteLine("Save game: 4");
-                Console.WriteLine("Exit game: 5");
+                Console.WriteLine("Equipment: 4");
+                Console.WriteLine("Save game: 5");
+                Console.WriteLine("Exit game: 6");
                 var choose = Console.ReadLine();
 
                 switch (choose)
@@ -49,9 +51,17 @@ namespace Console_Knights.Controller
                         heroController.HeroInformations();
                         break;
                     case "3":
-                        throw new NotImplementedException();
+                        shopController.OpenShop();
                         break;
                     case "4":
+                        //SaveGame();
+                        throw new NotImplementedException();
+                        break;
+                    case "5":
+                        //SaveGame();
+                        throw new NotImplementedException();
+                        break;
+                    case "6":
                         //SaveGame();
                         throw new NotImplementedException();
                         break;

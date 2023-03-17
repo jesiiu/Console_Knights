@@ -49,5 +49,9 @@ namespace Console_Knights.Controller
             Console.WriteLine("Press any key for back to main menu...");
             Console.ReadLine();
         }
+        public void HeroEquipment()
+        {
+
+        }
     }
 }

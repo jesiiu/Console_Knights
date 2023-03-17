@@ -1,4 +1,5 @@
-﻿using Console_Knights.Models;
+﻿using Console_Knights.Memory;
+using Console_Knights.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,8 @@ namespace Console_Knights.Assets
 {
     public class HealthPotion : ItemModel
     {
-        private int regenerateValue = 2;
+        public int regenerateValue = 2;
+
         public HealthPotion() { Name = "Health potion"; Description = $"Regenerate {regenerateValue}"; Cost = 10; }
 
         public override void ItemDescription()
@@ -19,6 +21,10 @@ namespace Console_Knights.Assets
         public override void ItemDescriptionShort()
         {
             base.ItemDescriptionShort();
+        }
+        public override void Use()
+        {
+            base.Use();
         }
     }
 }
