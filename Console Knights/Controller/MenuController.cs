@@ -55,7 +55,7 @@ namespace Console_Knights.Controller
                         break;
                     case "4":
                         //SaveGame();
-                        throw new NotImplementedException();
+                        heroController.HeroEquipment();
                         break;
                     case "5":
                         //SaveGame();

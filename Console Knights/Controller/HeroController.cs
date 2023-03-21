@@ -1,4 +1,5 @@
 ﻿using Console_Knights.Assets;
+using Console_Knights.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +52,14 @@ namespace Console_Knights.Controller
         }
         public void HeroEquipment()
         {
-
+            var itemToUse = new Dictionary<int, ItemModel>();
+            var index = 0;
+            foreach(var item in appMemory.mainHero.Equipment)
+            {
+                Console.WriteLine(item.Description);
+                itemToUse.Add(index, item);
+                index++;
+            }
         }
     }
 }
